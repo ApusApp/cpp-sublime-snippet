@@ -1,0 +1,8 @@
+<snippet>
+    <description>return</description>
+    <content><![CDATA[
+    return ${1:/* code */};
+]]></content>
+    <tabTrigger>return_</tabTrigger>
+    <scope>source.c++, source.c++11</scope>
+</snippet>
