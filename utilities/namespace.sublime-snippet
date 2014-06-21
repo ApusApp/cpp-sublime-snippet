@@ -1,9 +1,9 @@
 <snippet>
 	<description>Namespace</description>
     <content><![CDATA[namespace ${1:name} {
-$0
-} // $1
+} // namespace $1
 ]]></content>
     <tabTrigger>name</tabTrigger>
     <scope>source.c++, source.objc++, source.c++11</scope>
 </snippet>
+

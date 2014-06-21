@@ -1,0 +1,8 @@
+<snippet>
+    <description>Anonymous Namespace</description>
+    <content><![CDATA[namespace {
+} // namespace
+]]></content>
+    <tabTrigger>asname</tabTrigger>
+    <scope>source.c++, source.objc++, source.c++11</scope>
+</snippet>

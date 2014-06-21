@@ -1,7 +1,9 @@
 <snippet>
 	<description>Functor</description>
-    <content><![CDATA[struct ${1:name} {
-	${2:bool} operator()(${3:/* args */}) const noexcept {
+    <content><![CDATA[struct ${1:name}
+{
+	${2:bool} operator() (${3:/* args */}) const noexcept
+    {
 		${0:/* code */}
 	}
 };]]></content>

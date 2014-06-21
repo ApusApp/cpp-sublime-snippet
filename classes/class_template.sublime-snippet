@@ -1,10 +1,13 @@
 <snippet>
     <content><![CDATA[template<typename ${1:T}>
-class ${2:${TM_FILENAME/(.+)\..+|.*/$1/:name}} {
-private:
-	${3:/* data */}
+class ${2:${TM_FILENAME/(.+)\..+|.*/$1/:name}}
+{
 public:
-	${2/(\w+).*/$1/}(${4:/* args */}) ${5:= default;}
+	${2/(\w+).*/$1/} ();
+    ~${1/(\w+).*/$1/} ();
+
+private:
+
 };]]></content>
     <tabTrigger>classtemp</tabTrigger>
     <scope>source.c++, source.objc++, source.c++11</scope>

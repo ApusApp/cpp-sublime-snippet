@@ -1,6 +1,6 @@
 <snippet>
 	<description>Lambda - Full spec</description>
-	<content><![CDATA[[${1:/* capture */}](${2:/* args */}) ${3:mutable} ${4:noexcept} -> ${5:/* return */} {
+	<content><![CDATA[[${1:/* capture */}] (${2:/* args */}) ${3:mutable} ${4:noexcept} -> ${5:/* return */} {
 	${6:/* code */}
 }]]></content>
 	<tabTrigger>lamfull</tabTrigger>
