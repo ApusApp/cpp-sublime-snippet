@@ -3,9 +3,11 @@
     <content><![CDATA[try {
     ${1:/* code */}
 }
-catch () {
+catch (${2:std::excepion& e}) {
+    ${3:/* code */}
 }
-cathc () {
+catch (${4:...}) {
+    ${5:/* code */}
 }]]></content>
     <tabTrigger>trycc</tabTrigger>
     <scope>source.c++, source.objc++, source.c++11</scope>
