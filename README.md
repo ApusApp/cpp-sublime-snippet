@@ -5,24 +5,27 @@ Made for C++11.
 Uses this style:
 
 ```cpp
-if(/* condition */) {
+if (/* condition */) {
+    /* code */
+}
+```
+
+```cpp
+for (unsigned i = 0; i < count; ++i) {
     /* code */
 }
 ```
 
 ## Installation
 
-There are two ways to install these snippets, with the first being the easiest with the 
-[Package Control](https://sublime.wbond.net). 
+`git clone https://github.com/ApusApp/cpp-sublime-snippet.git`
 
-- Press Ctrl + Shift + P
-- Type Install and you'll see "Package Control: Install Package"
-- Type "C++ Snippets" and it should be the first result.
+Or
 
-The other and arguably harder way to install the package is to go to your package directory and run 
-
-`git clone https://github.com/Rapptz/cpp-sublime-snippet.git`
-
+Download the cpp-sublime-snippet.zip then unzip it, at last, move it to package directory and rename it to C++ Snippets.
+For example in Linux:
+    unzip cpp-sublime-snippet.zip
+    mv cpp-sublime-snippet ~./config/sublime-text-3/Packages/C++\ Snippets
 
 ## Documentation
 

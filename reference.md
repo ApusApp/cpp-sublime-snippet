@@ -17,6 +17,7 @@ your preference.
 - [Lambda](#lambda)
 - [Functions](#functions)
 - [Functors](#functors)
+- [Others](#others)
 
 ### Loops
 
@@ -432,7 +433,9 @@ struct $1 {
 };
 ```
 
-Add others:
+###Others:
+
+Add others
 
 **Trigger**: cout
 
