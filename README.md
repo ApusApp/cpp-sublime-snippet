@@ -23,8 +23,11 @@ for (unsigned i = 0; i < count; ++i) {
 Or
 
 Download the cpp-sublime-snippet.zip then unzip it, at last, move it to package directory and rename it to C++ Snippets.
+
 For example in Linux:
+
     unzip cpp-sublime-snippet.zip
+
     mv cpp-sublime-snippet ~./config/sublime-text-3/Packages/C++\ Snippets
 
 ## Documentation
