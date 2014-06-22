@@ -2,7 +2,9 @@
 	<description>try catch block</description>
     <content><![CDATA[try {
 	${1:/* code */}
-} catch () {
+}
+catch (${2:std::exception& e})
+    ${3:/* code */}
 }]]></content>
     <tabTrigger>try</tabTrigger>
     <scope>source.c++, source.objc++, source.c++11</scope>
