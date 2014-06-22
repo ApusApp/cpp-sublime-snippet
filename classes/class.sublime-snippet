@@ -3,12 +3,9 @@
     <content><![CDATA[class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}
 {
 public:
-    ${1/(\w+).*/$1/} ($2);
-    ~${1/(\w+).*/$1/} ();
+    ${1/(\w+).*/$1/}($2);
+    ~${1/(\w+).*/$1/}();
     $0
-
-private:
-
 };]]></content>
     <tabTrigger>class_</tabTrigger>
     <scope>source.c++, source.objc++, source.c++11</scope>

@@ -2,8 +2,10 @@
     <description>try catch cache block</description>
     <content><![CDATA[try {
     ${1:/* code */}
-} catch () {
-} cathc () {
+}
+catch () {
+}
+cathc () {
 }]]></content>
     <tabTrigger>trycc</tabTrigger>
     <scope>source.c++, source.objc++, source.c++11</scope>

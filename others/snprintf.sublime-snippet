@@ -1,6 +1,6 @@
 <snippet>
     <description>snprintf …</description>
-    <content><![CDATA[snprintf (${1:buf}, sizeof(), "", );]]></content>
+    <content><![CDATA[snprintf(${1:/*buf*/}, sizeof(${2:/*size*/}), "${3:/*fomart*/}", ${4:/*expression*/});]]></content>
     <tabTrigger>snprintf</tabTrigger>
     <scope>source.c, source.objc, source.c++, source.objc++, source.c++11</scope>
 </snippet>

@@ -3,7 +3,7 @@
     <content><![CDATA[struct ${1:name}
 {
 	template<typename T>
-	constexpr auto operator() (T&& t) const noexcept -> decltype (${2:/* code */})
+	constexpr auto operator()(T&& t) const noexcept -> decltype (${2:/* code */})
     {
 		return ${2:/* code */};
 	}

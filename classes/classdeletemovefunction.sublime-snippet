@@ -1,0 +1,15 @@
+<snippet>
+    <name>Class Del Move Func ...</name>
+    <content><![CDATA[class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:name}}
+{
+public:
+    ${1/(\w+).*/$1/}($2);
+    ~${1/(\w+).*/$1/}();
+    $0
+
+    ${1/(\w+).*/$1/}(const ${1/(\w+).*/$1/}&&) = delete;
+    ${1/(\w+).*/$1/}& operator=(const ${1/(\w+).*/$1/}&&) = delete;
+};]]></content>
+    <tabTrigger>classdelmovefunc</tabTrigger>
+    <scope>source.c++, source.objc++, source.c++11</scope>
+</snippet>

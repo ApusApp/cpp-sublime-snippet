@@ -33,7 +33,7 @@ do {
 **Trigger**: while
 
 ```cpp
-while($1) {
+while ($1) {
     $0
 }
 ```
@@ -41,7 +41,7 @@ while($1) {
 **Trigger**: for_
 
 ```cpp
-for(unsigned $2 = 0; $2 < $1; ${3:++$2}) {
+for (unsigned $2 = 0; $2 < $1; ${3:++$2}) {
     $0
 }
 ```
@@ -49,7 +49,7 @@ for(unsigned $2 = 0; $2 < $1; ${3:++$2}) {
 **Trigger**: forrange
 
 ```cpp
-for(auto&& $1 : $2) {
+for (auto&& $1 : $2) {
     $0
 }
 ```
@@ -111,7 +111,7 @@ template<typename $1>
 try {
     $1
 }
-catch($2) {
+catch ($2) {
     $0
 }
 ```
@@ -125,7 +125,7 @@ A snippet that generates an MIT License with input choices for your name and yea
 **Trigger**: if_
 
 ```cpp
-if($1) {
+if ($1) {
     $0
 }
 ```
@@ -133,10 +133,9 @@ if($1) {
 **Trigger**: ifelse
 
 ```cpp
-if($1) {
+if ($1) {
     $2
-}
-else {
+} else {
     $0
 }
 ```
@@ -144,13 +143,11 @@ else {
 **Trigger**: ifelif
 
 ```cpp
-if($1) {
+if ($1) {
     $2
-}
-else if($3) {
+} else if($3) {
     $4
-}
-else {
+} else {
     $0
 }
 ```
@@ -229,7 +226,8 @@ $0
 **Trigger**: struct_
 
 ```cpp
-struct $1 {
+struct $1
+{
     $0
 };
 ```
@@ -238,7 +236,8 @@ struct $1 {
 
 ```cpp
 template<typename $1>
-struct $2 {
+struct $2
+{
     $0
 };
 ```
@@ -246,7 +245,8 @@ struct $2 {
 **Trigger**: class_
 
 ```cpp
-class $1 {
+class $1
+{
 private:
     $2
 public:
@@ -258,7 +258,8 @@ public:
 
 ```cpp
 template<typename $1>
-class $2 {
+class $2
+{
 private:
     $3
 public:
@@ -271,7 +272,8 @@ public:
 Creates an exception derived from an std::exception entity.
 
 ```cpp
-class $1 : public $2 {
+class $1 : public $2
+{
 public:
     $1(const std::string& str): $2($3) {}
 };
@@ -329,7 +331,8 @@ Snippets to insert C++11 lambdas of different flavours.
 **Trigger**: funct
 
 ```cpp
-$1 $2($3) {
+$1 $2($3)
+{
     $0
 }
 ```
@@ -339,7 +342,8 @@ There is a `constexpr` variation:
 **Trigger**: confunct
 
 ```cpp
-constexpr $1 $2($3) {
+constexpr $1 $2($3)
+{
     return $0;
 }
 ```
@@ -350,19 +354,21 @@ constexpr $1 $2($3) {
 
 ```cpp
 template<typename $1>
-$2 $3($4) noexcept {
+$2 $3($4) noexcept
+{
     $0
 }
 ```
 
 **Trigger**: tempfunca
 
-This snippet doesn't use the same input for the return type and decltype specifier. 
+This snippet doesn't use the same input for the return type and decltype specifier.
 If you want that, use `tempcfunc` instead.
 
 ```cpp
 template<typename $1>
-auto $2($3) -> decltype($4) {
+auto $2($3) -> decltype($4)
+{
     $0
 }
 ```
@@ -371,7 +377,8 @@ auto $2($3) -> decltype($4) {
 
 ```cpp
 template<typename $1>
-constexpr $2 $3($4) {
+constexpr $2 $3($4)
+{
     return $5;
 }
 ```
@@ -380,7 +387,8 @@ constexpr $2 $3($4) {
 
 ```cpp
 template<typename $1>
-constexpr auto $2($3) noexcept -> decltype($4) {
+constexpr auto $2($3) noexcept -> decltype($4)
+{
     return $4;
 }
 ```
@@ -391,7 +399,8 @@ constexpr auto $2($3) noexcept -> decltype($4) {
 
 ```cpp
 struct $1 {
-    $2 operator()($3) const noexcept {
+    $2 operator()($3) const noexcept
+    {
         $0
     }
 };
@@ -404,7 +413,8 @@ There are also templated variations of functors:
 ```cpp
 struct $1 {
     template<typename T>
-    constexpr auto operator()(T&& t) const noexcept -> decltype($2) {
+    constexpr auto operator()(T&& t) const noexcept -> decltype($2)
+    {
         return $2;
     }
 };
@@ -415,8 +425,48 @@ struct $1 {
 ```cpp
 struct $1 {
     template<typename T, typename U>
-    constexpr auto operator()(T&& t, U&& u) const noexcept -> decltype($2) {
+    constexpr auto operator()(T&& t, U&& u) const noexcept -> decltype($2)
+    {
         return $2;
     }
 };
 ```
+
+Add others:
+
+**Trigger**: cout
+
+```cpp
+std::cout << $1 << std::endl;
+```
+
+**Trigger**: constc
+
+```cpp
+const_cast<$1>($2)
+```
+
+**Trigger**: dynamicc
+
+```cpp
+dynamic_cast<$1>($2)
+```
+
+**Trigger**: staticc
+
+```cpp
+static_cast<$1>($2)
+```
+
+**Trigger**: reinterpretc
+
+```cpp
+reinterpret_cast<$1>($2)
+```
+
+**Trigger**: snprintf
+
+```cpp
+snprintf(${1:/*buf*/}, sizeof(${2:/*size*/}), "${3:/*fomart*/}", ${4:/*expression*/});
+```
+
