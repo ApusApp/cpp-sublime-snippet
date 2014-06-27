@@ -1,0 +1,8 @@
+<snippet>
+    <description>Lambda - [](){}]</description>
+    <content><![CDATA[[](${1:/*param*/}) {
+    ${2:/* code */}
+}]]></content>
+    <tabTrigger>lam</tabTrigger>
+    <scope>source.c++, source.c++11</scope>
+</snippet>
