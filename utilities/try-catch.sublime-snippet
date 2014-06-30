@@ -3,7 +3,7 @@
     <content><![CDATA[try {
 	${1:/* code */}
 }
-catch (${2:std::exception& e})
+catch (${2:std::exception& e}) {
     ${3:/* code */}
 }]]></content>
     <tabTrigger>try</tabTrigger>
